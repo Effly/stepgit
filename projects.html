@@ -133,8 +133,11 @@
 blockContent.forEach((item,index)=>{
     item.addEventListener('mouseover',() =>{
         square.forEach((el,i)=>{
-            if(i!==index) el.classList.add('decoration');
-            el.classList.remove('undecoration')
+            if(i ==index ) {
+                el.classList.remove('undecoration')
+                el.classList.add('decoration');
+                
+           }
         })
        
     });
@@ -143,7 +146,8 @@ blockContent.forEach((item,index)=>{
 blockContent.forEach((item,index)=>{
     item.addEventListener('mouseout',() =>{
         square.forEach((el,i)=>{
-            if(i!==index) el.classList.add('undecoration');
+            el.classList.add('undecoration')
+            el.classList.remove('decoration')
         })
        
     });
