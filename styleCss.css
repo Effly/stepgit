@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+@font-face {
+        font-family: Square721;
+        src: url(Square721-BT-Roman_42078.ttf);
+    }
+section {
+    display: grid;
+    grid-template-columns: 20% 28% 42%;
+    grid-template-rows: 1fr;    
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+img {
+    filter: grayscale(100%);
+}
+img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.2s ease-out 0.2s;
+}
+
+
+.rencs {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 120px;
+    height: 100vh;
+    
+}
+
+.renc {
+    position: relative;
+    justify-self: center;
+    margin: 20px;
+    width: 60px;
+    height: 3px;
+    background-color: black;
+}
+#renc1, #renc2, #renc3, #renc4, #renc5, #renc6, #renc7  {
+    left:0;
+    transition: left 0.5s ease-out 0.2s;
+}
+
+
+.nav {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-self: start;
+    align-self:center;
+}
+
+#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7 {
+    transition: margin-left 0.5s ease-out 0.2s; 
+}
+
+#navRenc1, #navRenc2, #navRenc3, #navRenc4, #navRenc5, #navRenc6, #navRenc7 {
+    width: 0;
+    transition: width 0.5s ease-in-out 0.2s; 
+    
+
+}
+
+
+
+.navRenc {
+    display: flex;
+    align-items: center;
+    height: 3px;
+    background-color: black;
+}
+.nav__name{
+    font-family:Square721;
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+
+}
+.nav__link {
+    font-family:Square721;
+    font-size: 30px;
+    letter-spacing: 7px;
+    text-transform: lowercase ;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.photos {
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows:repeat(12, 1fr);
+
+}
+
+.photo1 { 
+    grid-row:1/8;
+    grid-column: 1/5;
+
+}
+
+.photo2 { 
+    grid-row: 1/4;
+    grid-column: 5/7;
+}
+.photo3 { 
+    grid-row:1/5;
+    grid-column: 7/11;
+}
+.photo4 { 
+    grid-row: 8/13;
+    grid-column:1/5;
+}
+.photo5 { 
+    grid-row:4/10;
+    grid-column:5/7;
+}
+.photo6 { 
+    grid-row:10/13;
+    grid-column: 5/7;
+}
+.photo7 { 
+   grid-row:5/13;
+   grid-column: 7/11;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="projects.css">
+    <title>ProjectsPage</title>
+</head>
+<body>
+        <div class="content__container">
+            <div class="nav">
+                <div class="container">
+                    <div class="nav__text">main</div>
+                    <div class="nav__squares"></div>
+                </div>
+                <div class="container">
+                    <div class="nav__text">gallery</div>
+                    <div class="nav__squares"></div>
+                </div>
+                <div class="container">
+                    <div class="nav__text">architecture</div>
+                    <div class="nav__squares"></div>
+                </div>
+                <div class="container">
+                    <div class="nav__text">products</div>
+                    <div class="nav__squares"></div>
+                </div>
+                <div class="container">
+                    <div class="nav__text">profile</div>
+                    <div class="nav__squares"></div>
+                </div>
+                
+
+            </div>
+
+            <div class="projects__container">
+                <div class="project__squares"></div>
+                <div class="project__text">
+                    <div class="project__name">project name</div>
+                    <div class="project__about">something about</div>
+                    <div class="project__date">year/month/date</div>
+                </div>
+
+                <div class="project__squares"></div>
+                <div class="project__text">
+                    <div class="project__name">project name</div>
+                    <div class="project__about">something about</div>
+                    <div class="project__date">year/month/date</div>
+                </div>
+
+                <div class="project__squares"></div>
+                <div class="project__text">
+                    <div class="project__name">project name</div>
+                    <div class="project__about">something about</div>
+                    <div class="project__date">year/month/date</div>
+                </div>
+
+                <div class="project__squares"></div>
+                <div class="project__text">
+                    <div class="project__name">project name</div>
+                    <div class="project__about">something about</div>
+                    <div class="project__date">year/month/date</div>
+                </div>
+
+                <div class="project__squares"></div>
+                <div class="project__text">
+                    <div class="project__name">project name</div>
+                    <div class="project__about">something about</div>
+                    <div class="project__date">year/month/date</div>
+                </div>
+
+                <div class="project__squares"></div>
+                <div class="project__text">
+                    <div class="project__name">project name</div>
+                    <div class="project__about">something about</div>
+                    <div class="project__date">year/month/date</div>
+                </div>
+            </div>
+
+            <div class="project__photoes">
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+                <div class="project__photo"><img src=""></div>
+
+            </div>
+        </div>
+
+
+    <script>
+    
+    let square = document.querySelectorAll("div.project__squares");
+    let blockContent = document.querySelectorAll("div.project__text")
+    
+    // function projectsOnMouse() {
+    //     for(let key in blockContent){
+    //         blockContent[key].addEventListener('mouseover', changePlaceSquare)
+    //     }
+    // }
+
+
+    // function changePlaceSquare() {
+        
+    //     for (let key in square){
+    //         square[key].style='transform:translateX(500%);'
+    //         square[key].style='transition: all 0.3s;'
+    //         console.log(1);
+    //     }item.add.classList('decoration') 
+    // }
+
+
+blockContent.forEach((item,index)=>{
+    item.addEventListener('mouseover',() =>{
+        square.forEach((el,i)=>{
+            if(i!==index) el.classList.add('decoration');
+            el.classList.remove('undecoration')
+        })
+       
+    });
+    
+}); 
+blockContent.forEach((item,index)=>{
+    item.addEventListener('mouseout',() =>{
+        square.forEach((el,i)=>{
+            if(i!==index) el.classList.add('undecoration');
+        })
+       
+    });
+    
+}); 
+
+// let tabcaption = document.querySelectorAll('.info-header-tab');
+// let tabdescription =  document.querySelectorAll('.info-tabcontent');
+// tabcaption.forEach((item, index)=> {
+//      item.addEventListener('click',() =>{
+//          console.log(index);
+//          tabdescription[index].classList.remove('hide');
+//          tabdescription.forEach((el, i)=>{
+//             if (i !== index)
+//                 el.classList.add('hide');
+//         })
+//     })
+// })
+    </script>
+</body>
+</html>
